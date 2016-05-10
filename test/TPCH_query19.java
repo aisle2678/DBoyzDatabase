@@ -14,17 +14,17 @@ public class TPCH_query19 {
     public static void main(String[] args){
         long startTime, endTime;
 
-//        startTime = System.nanoTime();
-//        run(DataSource.ROW_BASED);
-//        endTime = System.nanoTime();
-//
-//        System.out.println("Time cost: " + (endTime - startTime)/1e9);
+        startTime = System.nanoTime();
+        run(DataSource.ROW_BASED);
+        endTime = System.nanoTime();
+
+        System.out.println("Row Based Database Time cost: " + (endTime - startTime)/1e9);
 
         startTime = System.nanoTime();
         run(DataSource.COLUMN_BASED);
         endTime = System.nanoTime();
 
-        System.out.println("Time cost: " + (endTime - startTime)/1e9);
+        System.out.println("Column Based Database Time cost: " + (endTime - startTime)/1e9);
     }
 
     private static void run(int dbType){

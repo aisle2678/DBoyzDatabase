@@ -329,7 +329,7 @@ set rowcount 20
 go
 
 
-
+#11
 select
 	ps_partkey,
 	sum(ps_supplycost * ps_availqty) as value
@@ -361,7 +361,7 @@ set rowcount -1
 go
 
 
-
+#12
 select
 	l_shipmode,
 	sum(case
@@ -394,7 +394,7 @@ set rowcount -1
 go
 
 
-
+#13
 select
 	c_count,
 	count(*) as custdist
@@ -419,7 +419,7 @@ set rowcount -1
 go
 
 
-
+#14
 select
 	100.00 * sum(case
 		when p_type like 'PROMO%'
@@ -449,7 +449,7 @@ create view revenue0 (supplier_no, total_revenue) as
 	group by
 		l_suppkey;
 
-
+#15
 select
 	s_suppkey,
 	s_name,
@@ -475,7 +475,7 @@ set rowcount -1
 go
 
 
-
+#16
 select
 	p_brand,
 	p_type,
@@ -510,7 +510,7 @@ set rowcount -1
 go
 
 
-
+#17
 select
 	sum(l_extendedprice) / 7.0 as avg_yearly
 from
@@ -532,7 +532,7 @@ set rowcount -1
 go
 
 
-
+#18
 select
 	c_name,
 	c_custkey,
@@ -569,7 +569,7 @@ set rowcount 100
 go
 
 
-
+#19
 select
 	sum(l_extendedprice* (1 - l_discount)) as revenue
 from
